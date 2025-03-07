@@ -24,6 +24,7 @@ body {
     color: #99af91; /* Change color on hover */
 }
 
+/* Topbar stays fixed and on top */
 .topbar {
     list-style-type: none;
     margin: 0;
@@ -38,6 +39,7 @@ body {
     height: 50px; /* Adjust height if needed */
     padding: 0 7px; /* Keep some space on the sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
+    z-index: 2; /* Ensure the topbar is above the sidenav */
 }
 
 .topbar li {
@@ -66,4 +68,54 @@ body {
 .topbar-img a {
     display: inline-block;
     padding: 14px 4px 14px 0; /* Minimal padding to bring logo closer to text */
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Behind the topbar */
+    top: 50px; /* Start below the topbar */
+    left: 0;
+    background-color: #262c20; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; /* Adjust padding to account for the topbar */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left 0.5s; /* Smooth transition for margin-left */
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Burger icon styling */
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px; /* Add space between the burger icon and the logo */
+    margin-left: 5px;
+    color: white;
 }

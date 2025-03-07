@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>macuguita</title>
+    <script src="./index.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <main>
+</head>
+<body>
+<main>
+    <div id="mySidenav" class="sidenav">
+        <a href="https://twitter.com/macuguita" target="_blank">Twitter</a>
+        <a href="https://bsky.app/profile/macuguita.com" target="_blank">Bluesky</a>
+        <a href="https://github.com/macuguita" target="_blank">Github</a>
+        <a href="https://modrinth.com/user/macuguita" target="_blank">Modrinth</a>
+    </div>
+    <div id="main">
         <ul class="topbar">
-            <li class="topbar-img"><a href="#"><img src="favicon.ico" alt="Logo"></a></li>
+            <li class="topbar-img">
+                <span class="burger-icon" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+                <a href="#"><img src="favicon.ico" alt="Logo"></a>
+            </li>
             <li><a href="#">macuguita's website</a></li>
         </ul>
-
-
         <p class="text">My main Minecraft mods:</p>
         <ul class="text">
-            <li><a href="https://modrinth.com/mod/branches">guita's branches</a></li>
-            <li><a href="https://modrinth.com/mod/fabric-seasons-natures-spirit-compat">Fabric Seasons: Nature's Spirit Compat</a></li>
-            <li><a href="https://modrinth.com/mod/spanish-delight-refabricated">Spanish Delight Refabricated</a></li>
+            <li><a href="https://modrinth.com/mod/branches" target="_blank">guita's branches</a></li>
+            <li><a href="https://modrinth.com/mod/fabric-seasons-natures-spirit-compat" target="_blank">Fabric Seasons: Nature's Spirit Compat</a></li>
+            <li><a href="https://modrinth.com/mod/spanish-delight-refabricated" target="_blank">Spanish Delight Refabricated</a></li>
         </ul>
         <p class="text">My other minecraft mods:</p>
         <ul class="text">
-            <li><a href="https://modrinth.com/mod/stdrdc">Set time doesn't reset day count</a></li>
-            <li><a href="https://www.curseforge.com/minecraft/mc-mods/increase-mood-sound-limit">Increase mood sound limit</a></li>
+            <li><a href="https://modrinth.com/mod/stdrdc" target="_blank">Set time doesn't reset day count</a></li>
+            <li><a href="https://www.curseforge.com/minecraft/mc-mods/increase-mood-sound-limit" target="_blank">Increase mood sound limit</a></li>
         </ul>
-    </main>
-  </body>
+    </div>
+</main>
+</body>
 </html>
