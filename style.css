@@ -40,9 +40,24 @@ main {
     z-index: 2; /* Ensure the topbar is above the sidenav */
 }
 
+/* Ensure the logo and burger icon are aligned vertically */
 .topbar li {
     display: flex;
     align-items: center; /* Ensures logo and text are aligned vertically */
+}
+
+/* Burger icon styling */
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px; /* Add space between the burger icon and the logo */
+    margin-left: 5px;
+    color: white;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure it takes the full height of the topbar */
+    transform: translateY(-3px); /* Adjust this value to fine-tune alignment */
 }
 
 .topbar li a {
