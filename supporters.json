@@ -1,0 +1,13 @@
+{
+  "roles": {
+    "developer": [
+      "0e56050b-ee27-478a-a345-d2b384919081"
+    ],
+    "admin": [
+    ],
+    "supporter": [
+    ],
+    "vip": [
+    ]
+  }
+}
