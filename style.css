@@ -118,6 +118,12 @@ main {
     justify-content: center;
     height: 100%;
     transform: translateY(-3px);
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle:checked ~ .sidenav {
