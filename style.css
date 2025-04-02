@@ -1,8 +1,8 @@
 body {
     font-family: 'DM Sans', sans-serif;
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
-    background-color: #3C3D37; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    background-color: #3C3D37;
 }
 
 main {
@@ -14,83 +14,83 @@ main {
 }
 
 .text a {
-    color: #eddfce; /* Set the color for the links in the text section */
-    text-decoration: none; /* Remove the underline */
+    color: #eddfce;
+    text-decoration: none;
 }
 
 .text a:hover {
-    color: #99af91; /* Change color on hover */
+    color: #99af91;
 }
 
-/* Topbar stays fixed and on top */
 .topbar {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     overflow: hidden;
     background-color: #181C14;
     display: flex;
-    align-items: center; /* Ensures vertical alignment */
+    align-items: center;
     position: fixed;
     top: 0;
-    left: 0; /* Ensure it starts from the left */
+    left: 0;
     width: 100%;
-    height: 50px; /* Adjust height if needed */
-    padding: 0 7px; /* Keep some space on the sides */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    z-index: 2; /* Ensure the topbar is above the sidenav */
+    height: 50px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 2;
+    gap: 10px;
 }
 
-/* Ensure the logo and burger icon are aligned vertically */
 .topbar li {
     display: flex;
-    align-items: center; /* Ensures logo and text are aligned vertically */
+    align-items: center;
 }
 
 .topbar li a {
     display: block;
-    color: white; /* Set the color for the topbar links */
+    color: white;
     text-align: center;
-    text-decoration: none; /* Remove the underline */
+    text-decoration: none;
     font-size: 1.2em;
 }
 
-/* Scale logo to match text */
-.topbar-img img {
-    height: 1.4em; /* Matches font size */
-    width: auto;
-    vertical-align: middle; /* Vertically align the logo with the text */
-    margin-right: 10px; /* Minimal space between logo and text */
-    margin-left: 35px; /* Minimal space between logo and text */
+.topbar-img {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 25px;
 }
 
-/* Adjust the logo link (a) to match padding */
+.topbar-img img {
+    height: 1.4em;
+    width: auto;
+    vertical-align: middle;
+    margin: 0;
+}
+
 .topbar-img a {
     display: inline-block;
-    padding: 14px 4px 14px 0; /* Minimal padding to bring logo closer to text */
+    padding: 0;
 }
 
-/* Hide the checkbox */
 .nav-toggle {
     display: none;
 }
 
-/* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 250px; /* Sidebar width */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top of the content */
-    top: 50px; /* Start below the topbar */
-    left: -250px; /* Hide the sidebar off-screen by default */
-    background-color: #262c20; /* Sidebar background color */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px; /* Adjust padding to account for the topbar */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: -250px;
+    background-color: #262c20;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
 }
 
-/* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -98,24 +98,20 @@ main {
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
 
-/* Main content */
 #main {
     padding: 20px;
-    margin-top: 50px; /* Ensure content starts below the topbar */
-    transition: margin-left 0.5s; /* Smooth transition for margin-left */
+    margin-top: 50px;
+    transition: margin-left 0.5s;
 }
 
-/* Burger icon styling */
 .burger-icon {
     font-size: 30px;
     cursor: pointer;
-    margin-right: 10px;
-    margin-left: 5px;
+    margin: 0 10px 0 5px;
     color: white;
     display: flex;
     align-items: center;
@@ -124,7 +120,6 @@ main {
     transform: translateY(-3px);
 }
 
-/* When the checkbox is checked, show the sidenav */
 .nav-toggle:checked ~ .sidenav {
     left: 0;
 }
@@ -133,7 +128,6 @@ main {
     margin-left: 250px;
 }
 
-/* Position the toggle button */
 .nav-toggle-label {
     position: fixed;
     top: 0;
@@ -145,7 +139,6 @@ main {
     cursor: pointer;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
