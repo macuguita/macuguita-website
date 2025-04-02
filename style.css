@@ -46,25 +46,10 @@ main {
     align-items: center; /* Ensures logo and text are aligned vertically */
 }
 
-/* Burger icon styling */
-.burger-icon {
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 10px; /* Add space between the burger icon and the logo */
-    margin-left: 5px;
-    color: white;
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    height: 100%; /* Ensure it takes the full height of the topbar */
-    transform: translateY(-3px); /* Adjust this value to fine-tune alignment */
-}
-
 .topbar li a {
     display: block;
     color: white; /* Set the color for the topbar links */
     text-align: center;
-    padding: 14px 8px; /* Reduced padding for text */
     text-decoration: none; /* Remove the underline */
     font-size: 1.2em;
 }
@@ -74,13 +59,19 @@ main {
     height: 1.4em; /* Matches font size */
     width: auto;
     vertical-align: middle; /* Vertically align the logo with the text */
-    margin-right: 4px; /* Minimal space between logo and text */
+    margin-right: 10px; /* Minimal space between logo and text */
+    margin-left: 35px; /* Minimal space between logo and text */
 }
 
 /* Adjust the logo link (a) to match padding */
 .topbar-img a {
     display: inline-block;
     padding: 14px 4px 14px 0; /* Minimal padding to bring logo closer to text */
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+    display: none;
 }
 
 /* The side navigation menu */
@@ -95,11 +86,6 @@ main {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px; /* Adjust padding to account for the topbar */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* When the sidebar is open */
-.sidenav.open {
-    left: 0; /* Bring the sidebar into view */
 }
 
 /* The navigation menu links */
@@ -128,9 +114,35 @@ main {
 .burger-icon {
     font-size: 30px;
     cursor: pointer;
-    margin-right: 10px; /* Add space between the burger icon and the logo */
+    margin-right: 10px;
     margin-left: 5px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+/* When the checkbox is checked, show the sidenav */
+.nav-toggle:checked ~ .sidenav {
+    left: 0;
+}
+
+.nav-toggle:checked ~ #main {
+    margin-left: 250px;
+}
+
+/* Position the toggle button */
+.nav-toggle-label {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    cursor: pointer;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

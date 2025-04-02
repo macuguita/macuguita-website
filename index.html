@@ -11,17 +11,22 @@
 </head>
 <body>
 <main>
-    <div id="mySidenav" class="sidenav">
-        <a href="https://discordapp.com/users/523823445675606026/" target="_blank">Discord</a>
-        <a href="https://twitter.com/macuguita" target="_blank">Twitter</a>
-        <a href="https://bsky.app/profile/macuguita.com" target="_blank">Bluesky</a>
-        <a href="https://github.com/macuguita" target="_blank">Github</a>
-        <a href="https://modrinth.com/user/macuguita" target="_blank">Modrinth</a>
+    <div class="sidenav-container">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="sidenav">
+            <a href="https://discordapp.com/users/523823445675606026/" target="_blank">Discord</a>
+            <a href="https://twitter.com/macuguita" target="_blank">Twitter</a>
+            <a href="https://bsky.app/profile/macuguita.com" target="_blank">Bluesky</a>
+            <a href="https://github.com/macuguita" target="_blank">Github</a>
+            <a href="https://modrinth.com/user/macuguita" target="_blank">Modrinth</a>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="burger-icon">&#9776;</span>
+        </label>
     </div>
     <div id="main">
         <ul class="topbar">
             <li class="topbar-img">
-                <span class="burger-icon" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
                 <a href="#"><img src="favicon.ico" alt="Logo"></a>
             </li>
             <li><a href="#">macuguita's website</a></li>
@@ -39,6 +44,5 @@
         </ul>
     </div>
 </main>
-<script src="./index.js"></script>
 </body>
 </html>
